@@ -2,7 +2,25 @@
 #include<string>
 
 using namespace std;
+int re_search(string st)
+{
+    int len = st.length();
+    int temp = 0, num = 0;
+    for(int i = 0;i < len;i++)
+    {
+        if((st[i] != ' ')&&(temp == 0))
+        {
+            temp = 1;
+            num++;
+        }
+        else if (st[i] == ' ')
+        {
+            temp = 0;
+        }
+    }
+}
 int main()
 {
-    
+    string user_input;
+    cout << re_search( user_input ) << endl;
 }
